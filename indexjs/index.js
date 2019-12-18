@@ -151,7 +151,7 @@ let addbookTemplate = `
         </div>
         <div style="float:right;">
                 <button id="btnReset" type="reset" class="btn btn-outline-warning">Reset</button>&nbsp;&nbsp;&nbsp;
-            <button id="btnSubmit" type="button" class="btn btn-outline-success">Save Book</button>
+            <button id="btnSubmit" type="submit" class="btn btn-outline-success">Save Book</button>
         </div>
     </fieldset>
 </form>
@@ -275,8 +275,8 @@ async function bookList() {
 
 
 
-function addNewBook() {
-
+function addNewBook(event) {
+event.preventDefault();
   const txtIsbn = document.querySelector("#isbn");
   const txtTitle = document.querySelector("#title");
   const txtOverdueFee = document.querySelector("#overdueFee");
@@ -325,7 +325,7 @@ function addNewBook() {
 
 function addingNewBook() {
   placeholder.innerHTML = addbookTemplate;
-  document.getElementById("btnSubmit").addEventListener("click", addNewBook)
+  document.getElementById("newBookForm").addEventListener("submit", addNewBook)
 
 
 
