@@ -1,0 +1,15 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:rgba(rgba(207, 231, 245, 0.8))
+}
+
+.image{
+    position:absolute;
+}
+
+#pop{
+    background-color: rgba(207, 231, 245, 0.8);
+}
+
